@@ -1,15 +1,35 @@
-# Oppsett av Linux på Raspberry Pi
+# Telefonkatalogen
 
-## Intro
-Denne guiden hjelper deg med å sette opp Linux fra en ny installasjon på Raspberry Pi. Selv om mye kan gjøres med GUI, anbefales det å øve på å bruke terminalen. Etter denne guiden skal du (forhåpentligvis) ikke lenger trenge mus, tastatur eller skjerm for å styre Raspberry Pi-en, men du trenger dette nå første gangen.
+## Installationsveiledning
 
-**OBS:** CMD i Windows og terminalen i Linux bruker ikke alle de samme kommandoene. Sjekk tabellen på siste side for nyttige kommandoer.
+Denne veiledningen beskriver hvordan du setter opp telefonkatalogen på Raspberry Pi.
 
-## Guide
+### Krav
 
-1. **Åpne terminalen** med `CTRL + ALT + T` (her skriver du kommandoene under).
+- Raspberry Pi med installert OS.
+- Tilgang til internett.
+- Grunnleggende terminalferdigheter.
 
-2. **Se etter og installer oppdateringer** til all programvare som er installert:
+### Steg for Steg Veiledning
+
+1. **Oppsett av Raspberry Pi**
+   - Følg [denne guiden](link-til-guide) for å installere Raspberry Pi OS.
+
+2. **Aktiver SSH**
+   - Åpne terminalen:
+     ```bash
+     sudo raspi-config
+     ```
+   - Naviger til `Interfacing Options` og aktiver SSH.
+
+3. **Sett opp brannmur**
+   - Installer UFW:
+     ```bash
+     sudo apt install ufw
+     sudo ufw enable
+     sudo ufw allow ssh
+     ```
+
+4. **Installer nødvendige programmer**
    ```bash
-   sudo apt update  # finner oppdateringer
-   sudo apt upgrade # installerer oppdateringer
+   sudo apt install python3-pip git mariadb-server
