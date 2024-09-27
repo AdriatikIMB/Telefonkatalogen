@@ -1,15 +1,15 @@
-# Telefonkatalogen
+# Oppsett av Linux på Raspberry Pi
 
-Dette prosjektet er en telefonkatalog-applikasjon laget med Python. Den lar brukere legge til, søke etter og fjerne kontakter fra en database.
+## Intro
+Denne guiden hjelper deg med å sette opp Linux fra en ny installasjon på Raspberry Pi. Selv om mye kan gjøres med GUI, anbefales det å øve på å bruke terminalen. Etter denne guiden skal du (forhåpentligvis) ikke lenger trenge mus, tastatur eller skjerm for å styre Raspberry Pi-en, men du trenger dette nå første gangen.
 
-## Funksjoner
-- Legg til nye kontakter
-- Søk etter eksisterende kontakter
-- Slett kontakter
+**OBS:** CMD i Windows og terminalen i Linux bruker ikke alle de samme kommandoene. Sjekk tabellen på siste side for nyttige kommandoer.
 
-## Installasjon
-Følg disse trinnene for å sette opp telefonkatalogen:
+## Guide
 
-1. Klon repoet til din lokale maskin:
+1. **Åpne terminalen** med `CTRL + ALT + T` (her skriver du kommandoene under).
+
+2. **Se etter og installer oppdateringer** til all programvare som er installert:
    ```bash
-   git clone https://github.com/AdriatikIMB/Telefonkatalogen.git
+   sudo apt update  # finner oppdateringer
+   sudo apt upgrade # installerer oppdateringer
